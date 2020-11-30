@@ -1,0 +1,15 @@
+@import './normalize.css';
+@import './font.css';
+@import './header.css';
+
+.mainWrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1600px;
+    display: grid;
+    grid-template-areas: 
+    ". header .";
+    grid-template-columns: 92px 1fr 92px;
+    font-family: 'OSReg';
+    color: #001A34;
+}
