@@ -45,7 +45,7 @@
           justify-content: space-between;
   max-width: 520px;
   width: 100%;
-  font-family: "" OSReg "";
+  font-family: 'OSReg';
   font-size: 16px;
   line-height: 20px;
 }
@@ -66,6 +66,7 @@
 }
 
 .button {
+  font-family: 'OSLight';
   font-size: 20px;
   line-height: 20px;
   padding: 22px 32px;
