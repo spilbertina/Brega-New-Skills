@@ -5,7 +5,7 @@
     padding: 0;
     background: center center no-repeat;
     background-size: cover;
-    background-image: url('./img/image.jpg');
+    background-image: url('/img/image.jpg');
     grid-area: person;
 }
 
