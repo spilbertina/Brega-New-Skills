@@ -1,0 +1,134 @@
+:root {
+  --color-white: white;
+  --color-dark:#001A34;
+  --color-ozon: #005BFF;
+}
+
+@font-face {
+  font-family: 'OSBold';
+  src: url(../font/OpenSans-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'OSLight';
+  src: url(../font/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family: 'OSReg';
+  src: url(../font/OpenSans-Regular.ttf);
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 124px;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 520px;
+  width: 100%;
+  font-family: 'OSReg';
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.header__navigationLink {
+  height: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-family: 'OSBold';
+}
+
+.header__tagline {
+  font-size: 22px;
+  line-height: 26px;
+  font-family: 'OSBold';
+  color: var(--color-dark);
+}
+
+.button {
+  font-family: 'OSLight';
+  font-size: 20px;
+  line-height: 20px;
+  padding: 22px 32px;
+  width: 208px;
+  height: 64px;
+  border-radius: 8px;
+  background: var(--color-ozon);
+  color: var(--color-white);
+  border: none;
+}
+
+.picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 708px;
+  padding: 0;
+  background: center center no-repeat;
+  background-size: cover;
+  background-image: url("../img/image.jpg");
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: picture;
+}
+
+.picture__info {
+  color: var(--color-white);
+  width: 500px;
+  height: 276px;
+  padding: 0;
+  margin-left: 110px;
+  margin-bottom: 120px;
+}
+
+.picture__title {
+  font-family: 'OSBold';
+  font-size: 58px;
+  line-height: 68px;
+  margin-bottom: 20px;
+}
+
+.picture__text {
+  font-family: 'OSLight';
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+
+.mainWrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". header ." ". picture .";
+  -ms-grid-columns: 92px 1fr 92px;
+      grid-template-columns: 92px 1fr 92px;
+  font-family: 'OSReg';
+  color: var(--color-dark);
+}
+/*# sourceMappingURL=index.css.map */

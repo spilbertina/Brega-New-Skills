@@ -1,4 +1,4 @@
-.person {
+.picture {
     display: flex;
     align-items: center;
     min-height: 708px;
@@ -6,10 +6,10 @@
     background: center center no-repeat;
     background-size: cover;
     background-image: url('/img/image.jpg');
-    grid-area: person;
+    grid-area: picture;
 }
 
-.person__info {
+.picture__info {
     color: var(--color-white);
     width: 500px;
     height: 276px;
@@ -18,15 +18,15 @@
     margin-bottom: 120px;
 }
 
-.person__title {
-    font-family: var(--font-bold);
+.picture__title {
+    font-family: 'OSBold';
     font-size: 58px;
     line-height: 68px;
     margin-bottom: 20px;
 }
 
-.person__text {
-    font-family: var(--font-light);
+.picture__text {
+    font-family: 'OSLight';
     font-weight: 300;
     font-size: 24px;
     line-height: 32px;
