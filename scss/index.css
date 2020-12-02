@@ -9,18 +9,18 @@
 
 @font-face {
   font-family: 'OSBold';
-  src: url(/font/OpenSans-Bold.ttf);
+  src: url(../font/OpenSans-Bold.ttf);
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'OSLight';
-  src: url(/font/OpenSans-Light.ttf);
+  src: url(../font/OpenSans-Light.ttf);
 }
 
 @font-face {
   font-family: 'OSReg';
-  src: url(/font/OpenSans-Regular.ttf);
+  src: url(../font/OpenSans-Regular.ttf);
 }
 
 :root {
@@ -100,7 +100,7 @@
   padding: 0;
   background: center center no-repeat;
   background-size: cover;
-  background-image: url("img/image.jpg");
+  background-image: url("../img/image.jpg");
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: person;
