@@ -1,6 +1,9 @@
 @import './normalize.css';
 @import './font.css';
+@import './variables.css';
 @import './header.css';
+@import './button.css';
+@import './person.css';
 
 .mainWrapper {
     width: 100%;
@@ -8,8 +11,9 @@
     max-width: 1600px;
     display: grid;
     grid-template-areas: 
-    ". header .";
+    ". header ."
+    ". person .";
     grid-template-columns: 92px 1fr 92px;
-    font-family: 'OSReg';
-    color: #001A34;
+    font-family: var(--font-regular);
+    color: var(--color-dark);
 }
