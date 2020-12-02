@@ -1,9 +1,8 @@
-@import './normalize.css';
-@import './font.css';
-@import './variables.css';
-@import './header.css';
-@import './button.css';
-@import './picture.css';
+@import './variables';
+@import './font';
+@import './header';
+@import './button';
+@import './picture';
 
 .mainWrapper {
     width: 100%;
@@ -14,6 +13,6 @@
     ". header ."
     ". picture .";
     grid-template-columns: 92px 1fr 92px;
-    font-family: var(--font-regular);
+    font-family: 'OSReg';
     color: var(--color-dark);
 }
