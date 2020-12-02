@@ -89,7 +89,7 @@
   border: none;
 }
 
-.pictire {
+.picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,13 +100,13 @@
   padding: 0;
   background: center center no-repeat;
   background-size: cover;
-  background-image: url("/img/image.jpg");
+  background-image: url("img/image.jpg");
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: person;
 }
 
-.pictire__info {
+.picture__info {
   color: var(--color-white);
   width: 500px;
   height: 276px;
@@ -115,14 +115,14 @@
   margin-bottom: 120px;
 }
 
-.pictire__title {
+.picture__title {
   font-family: var(--font-bold);
   font-size: 58px;
   line-height: 68px;
   margin-bottom: 20px;
 }
 
-.pictire__text {
+.picture__text {
   font-family: var(--font-light);
   font-weight: 300;
   font-size: 24px;
