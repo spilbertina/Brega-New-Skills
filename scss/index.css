@@ -1,7 +1,4 @@
 :root {
-  --font-bold: 'OSBold';
-  --font-regular: 'OSReg';
-  --font-light:'OSLight';
   --color-white: white;
   --color-dark:#001A34;
   --color-ozon: #005BFF;
@@ -21,15 +18,6 @@
 @font-face {
   font-family: 'OSReg';
   src: url(../font/OpenSans-Regular.ttf);
-}
-
-:root {
-  --font-bold: 'OSBold';
-  --font-regular: 'OSReg';
-  --font-light:'OSLight';
-  --color-white: white;
-  --color-dark:#001A34;
-  --color-ozon: #005BFF;
 }
 
 .header {
@@ -57,7 +45,7 @@
           justify-content: space-between;
   max-width: 520px;
   width: 100%;
-  font-family: var(--font-regular);
+  font-family: "" OSReg "";
   font-size: 16px;
   line-height: 20px;
 }
@@ -67,13 +55,13 @@
   font-size: 14px;
   text-decoration: none;
   color: var(--color-dark);
-  font-family: var(--font-bold);
+  font-family: 'OSBold';
 }
 
 .header__tagline {
   font-size: 22px;
   line-height: 26px;
-  font-family: var(--font-bold);
+  font-family: 'OSBold';
   color: var(--color-dark);
 }
 
@@ -103,7 +91,7 @@
   background-image: url("../img/image.jpg");
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  grid-area: person;
+  grid-area: picture;
 }
 
 .picture__info {
@@ -116,14 +104,14 @@
 }
 
 .picture__title {
-  font-family: var(--font-bold);
+  font-family: 'OSBold';
   font-size: 58px;
   line-height: 68px;
   margin-bottom: 20px;
 }
 
 .picture__text {
-  font-family: var(--font-light);
+  font-family: 'OSLight';
   font-weight: 300;
   font-size: 24px;
   line-height: 32px;
@@ -136,10 +124,10 @@
   max-width: 1600px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". header ." ". person .";
+      grid-template-areas: ". header ." ". picture .";
   -ms-grid-columns: 92px 1fr 92px;
       grid-template-columns: 92px 1fr 92px;
-  font-family: var(--font-regular);
+  font-family: 'OSReg';
   color: var(--color-dark);
 }
 /*# sourceMappingURL=index.css.map */
