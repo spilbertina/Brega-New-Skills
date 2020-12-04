@@ -1,12 +1,22 @@
-.picture {
+.main-section {
     display: flex;
     align-items: center;
     min-height: 708px;
     padding: 0;
     background: center center no-repeat;
     background-size: cover;
-    background-image: url('../img/image.jpg');
-    grid-area: picture;
+
+    &_first {
+        grid-area: mainFirst;
+        background-image: url('../img/image.jpg');
+    }
+
+    &_second {
+        grid-area: mainSecond;
+        background-image: url('../img/image2.jpg');
+        justify-content: flex-end;
+        
+    }
 
     &__info {
         color: var(--color-white);
@@ -15,15 +25,21 @@
         padding: 0;
         margin-left: 110px;
         margin-bottom: 120px;
+
+    &_second {
+        margin-right: 270px;
+        margin-bottom: 120px;
+        width: 420px;
     }
-    
+    }
+
     &__title {
         font-family: 'OSBold';
         font-size: 58px;
         line-height: 68px;
         margin-bottom: 20px;
     }
-    
+
     &__text {
         font-family: 'OSLight';
         font-weight: 300;
@@ -31,6 +47,4 @@
         line-height: 32px;
         margin-bottom: 32px;
     }
-
 }
-

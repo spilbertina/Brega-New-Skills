@@ -2,16 +2,18 @@
 @import './font';
 @import './header';
 @import './button';
-@import './picture';
+@import './main-section';
 
-.mainWrapper {
+.main-wrapper {
     width: 100%;
     margin: 0 auto;
     max-width: 1600px;
     display: grid;
     grid-template-areas: 
     ". header ."
-    ". picture .";
+    ". mainFirst ."
+    // ". courses ."
+    ". mainSecond .";
     grid-template-columns: 92px 1fr 92px;
     font-family: 'OSReg';
     color: var(--color-dark);

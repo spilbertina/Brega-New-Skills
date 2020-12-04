@@ -1,4 +1,4 @@
-.header {
+header {
     grid-area: header;
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,7 @@
     line-height: 20px;
 }
 
-.header__navigationLink {
+.header__navigation-link {
     height: 20px;
     font-size: 14px;
     text-decoration: none;
