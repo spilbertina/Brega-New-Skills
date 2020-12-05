@@ -1,9 +1,12 @@
 .courses {
     grid-area: courses;
-    min-height: 204px;
-    max-width: 1176px;
-    padding-left: 150px;
+    // min-height: 204px;
+    width: 1176px;
+    // justify-self: center;
+    // padding-left: 120px;
     padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
@@ -15,6 +18,7 @@ h3 {
 
 .all-cards {
     display: flex;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -28,16 +32,16 @@ h3 {
     box-sizing: border-box;
     box-shadow: 2px 2px 20px #E9EEF1;
     border-radius: 12px;
-}
 
-.card-img {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
+    &-img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
 
-.card-info {
-    padding: 32px 24px;
-    max-width: 328px;
+    &-info {
+        padding: 32px 24px;
+        max-width: 328px;
+    }
 }
 
 h4 {
