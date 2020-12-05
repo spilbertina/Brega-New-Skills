@@ -15,7 +15,6 @@
         grid-area: mainSecond;
         background-image: url('../img/image2.jpg');
         justify-content: flex-end;
-        
     }
 
     &__info {
@@ -26,11 +25,11 @@
         margin-left: 110px;
         margin-bottom: 120px;
 
-    &_second {
-        margin-right: 270px;
-        margin-bottom: 120px;
-        width: 420px;
-    }
+        &_second {
+            margin-right: 270px;
+            margin-bottom: 120px;
+            width: 420px;
+        }
     }
 
     &__title {
