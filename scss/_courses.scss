@@ -1,19 +1,16 @@
 .courses {
     grid-area: courses;
-    // min-height: 204px;
     width: 1176px;
-    // justify-self: center;
-    // padding-left: 120px;
     padding-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
-}
 
-h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 46px;
-    line-height: 54px;
+    h3 {
+        display: flex;
+        justify-content: center;
+        font-size: 46px;
+        line-height: 54px;
+    }
 }
 
 .all-cards {
@@ -41,27 +38,20 @@ h3 {
     &-info {
         padding: 32px 24px;
         max-width: 328px;
+
+        h4 {
+            @include h4_main;
+        }
+
+        p {
+            @include p_main(16px);
+            padding-top: 16px;
+            padding-bottom: 24px;
+        }
+
+        a {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
-}
-
-h4 {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0;
-}
-
-p {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    font-family: 'OSLight';
-    padding-top: 16px;
-    padding-bottom: 24px;
-    margin: 0;
-}
-
-a {
-    font-size: 18px;
-    line-height: 24px;
 }

@@ -11,12 +11,12 @@
     margin: 0 auto;
     max-width: 1600px;
     display: grid;
-    grid-template-areas: 
-    ". header ."
-    ". mainFirst ."
-    ". courses ."
-    ". mainSecond ."
-    ". advantages .";
+    grid-template-areas:
+        ". header ."
+        ". mainFirst ."
+        ". courses ."
+        ". mainSecond ."
+        ". advantages .";
     grid-template-columns: 92px 1fr 92px;
     font-family: 'OSReg';
     color: var(--color-dark);

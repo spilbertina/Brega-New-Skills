@@ -1,6 +1,6 @@
 :root {
   --color-white: white;
-  --color-dark:#001A34;
+  --color-dark: #001A34;
   --color-ozon: #005BFF;
 }
 
@@ -152,7 +152,7 @@ header {
   margin-right: auto;
 }
 
-h3 {
+.courses h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,24 +202,25 @@ h3 {
   max-width: 328px;
 }
 
-h4 {
+.card-info h4 {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   margin: 0;
+  padding-bottom: 16px;
 }
 
-p {
+.card-info p {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   font-family: 'OSLight';
+  margin: 0;
   padding-top: 16px;
   padding-bottom: 24px;
-  margin: 0;
 }
 
-a {
+.card-info a {
   font-size: 18px;
   line-height: 24px;
 }
@@ -233,7 +234,7 @@ a {
   padding-bottom: 106px;
 }
 
-h3 {
+.advantages h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +246,7 @@ h3 {
   margin: 68px 0;
 }
 
-.all-advantages {
+.advantages .all-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +255,7 @@ h3 {
           justify-content: space-between;
 }
 
-.region {
+.advantages .region {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,7 +271,23 @@ h3 {
   text-align: center;
 }
 
-.region-title {
+.advantages .region h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.advantages .region p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'OSLight';
+  margin: 0;
+}
+
+.advantages .region-title {
   padding-top: 24px;
   padding-bottom: 16px;
 }

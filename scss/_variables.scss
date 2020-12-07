@@ -1,5 +1,21 @@
 :root {
     --color-white: white;
-    --color-dark:#001A34;
+    --color-dark: #001A34;
     --color-ozon: #005BFF;
+}
+
+@mixin p_main($font-size) {
+    font-weight: 300;
+    font-size: $font-size;
+    line-height: 24px;
+    font-family: 'OSLight';
+    margin: 0;
+}
+
+@mixin h4_main {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    padding-bottom: 16px;
 }
