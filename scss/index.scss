@@ -5,6 +5,7 @@
 @import './main-section';
 @import './courses';
 @import 'advantages';
+@import 'request';
 
 .main-wrapper {
     width: 100%;
@@ -16,7 +17,8 @@
         ". mainFirst ."
         ". courses ."
         ". mainSecond ."
-        ". advantages .";
+        ". advantages ."
+        "request request request";
     grid-template-columns: 92px 1fr 92px;
     font-family: 'OSReg';
     color: var(--color-dark);

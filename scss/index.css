@@ -20,7 +20,7 @@
   src: url(../font/OpenSans-Regular.ttf);
 }
 
-header {
+.header {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: header;
@@ -45,23 +45,24 @@ header {
           justify-content: space-between;
   max-width: 520px;
   width: 100%;
-  font-family: 'OSReg';
+  font-family: "OSReg";
   font-size: 16px;
   line-height: 20px;
 }
 
 .header__navigation-link {
   height: 20px;
+  font-family: "OSBold";
   font-size: 14px;
+  line-height: 20px;
   text-decoration: none;
   color: var(--color-dark);
-  font-family: 'OSBold';
 }
 
 .header__tagline {
+  font-family: "OSBold";
   font-size: 22px;
   line-height: 26px;
-  font-family: 'OSBold';
   color: var(--color-dark);
 }
 
@@ -72,10 +73,12 @@ header {
   padding: 22px 32px;
   width: 208px;
   height: 64px;
+  border: none;
   border-radius: 8px;
   background: var(--color-ozon);
   color: var(--color-white);
-  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .button_size {
@@ -159,6 +162,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "OSReg";
   font-size: 46px;
   line-height: 54px;
 }
@@ -211,10 +215,9 @@ header {
 }
 
 .card-info p {
-  font-weight: 300;
+  font-family: "OSLight";
   font-size: 16px;
   line-height: 24px;
-  font-family: 'OSLight';
   margin: 0;
   padding-top: 16px;
   padding-bottom: 24px;
@@ -235,14 +238,15 @@ header {
 }
 
 .advantages h3 {
+  font-family: "OSReg";
+  font-size: 46px;
+  line-height: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 46px;
-  line-height: 54px;
   margin: 68px 0;
 }
 
@@ -280,10 +284,9 @@ header {
 }
 
 .advantages .region p {
-  font-weight: 300;
+  font-family: "OSLight";
   font-size: 16px;
   line-height: 24px;
-  font-family: 'OSLight';
   margin: 0;
 }
 
@@ -298,7 +301,7 @@ header {
   max-width: 1600px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages .";
+      grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages ." "request request request";
   -ms-grid-columns: 92px 1fr 92px;
       grid-template-columns: 92px 1fr 92px;
   font-family: 'OSReg';
