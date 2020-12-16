@@ -33,17 +33,12 @@
     }
 
     &__title {
-        font-family: 'OSBold';
-        font-size: 58px;
-        line-height: 68px;
+        @include font('OSBold', 58px, 68px);
         margin-bottom: 20px;
     }
 
     &__text {
-        font-family: 'OSLight';
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 32px;
+        @include font('OSLight', 24px, 32px);
         margin-bottom: 32px;
     }
 }

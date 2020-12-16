@@ -1,7 +1,5 @@
 .button {
-    font-family: 'OSLight';
-    font-size: 20px;
-    line-height: 20px;
+    @include font('OSLight', 20px, 20px);
     padding: 22px 32px;
     width: 208px;
     height: 64px;
@@ -14,5 +12,32 @@
 
     &_size {
         width: 238px;
+    }
+}
+
+.input {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 56px;
+    padding: 16px 20px;
+    border: 1px solid var(--c-mystic);
+    border-radius: 6px;
+    @include font('OSReg', 18px, 400);
+
+    &::placeholder {
+        color: var(--c-dark-space);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &_valid {
+        border-color: var(--valid-value);
+    }
+
+    &_invalid {
+        border-color: var(--invalid-value);
     }
 }

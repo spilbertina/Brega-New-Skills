@@ -2,11 +2,11 @@
 @import './font';
 @import './header';
 @import './button';
-@import './main-section';
-@import './courses';
-@import 'advantages';
-@import 'request';
-
+@import './sections/main-section';
+@import './sections/courses';
+@import './sections/advantages';
+@import './sections/request'; 
+  
 .main-wrapper {
     width: 100%;
     margin: 0 auto;

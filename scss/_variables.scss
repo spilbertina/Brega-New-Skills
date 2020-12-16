@@ -2,6 +2,11 @@
     --color-white: white;
     --color-dark: #001A34;
     --color-ozon: #005BFF;
+    --c-aqua-haze: #EFF3F6;
+    --c-mystic: #B2BAC2;
+    --c-dark-space: #1A3047;
+    --valid-value: #06CA99;
+    --invalid-value: #F91155;
 }
 
 @mixin font($name, $size, $height:24px, $font-weight:300) {

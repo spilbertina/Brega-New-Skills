@@ -2,6 +2,11 @@
   --color-white: white;
   --color-dark: #001A34;
   --color-ozon: #005BFF;
+  --c-aqua-haze: #EFF3F6;
+  --c-mystic: #B2BAC2;
+  --c-dark-space: #1A3047;
+  --valid-value: #06CA99;
+  --invalid-value: #F91155;
 }
 
 @font-face {
@@ -67,7 +72,7 @@
 }
 
 .button {
-  font-family: 'OSLight';
+  font-family: "OSLight";
   font-size: 20px;
   line-height: 20px;
   padding: 22px 32px;
@@ -83,6 +88,50 @@
 
 .button_size {
   width: 238px;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  padding: 16px 20px;
+  border: 1px solid var(--c-mystic);
+  border-radius: 6px;
+  font-family: "OSReg";
+  font-size: 18px;
+  line-height: 400;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--c-dark-space);
+}
+
+.input:-ms-input-placeholder {
+  color: var(--c-dark-space);
+}
+
+.input::-ms-input-placeholder {
+  color: var(--c-dark-space);
+}
+
+.input::placeholder {
+  color: var(--c-dark-space);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input_valid {
+  border-color: var(--valid-value);
+}
+
+.input_invalid {
+  border-color: var(--invalid-value);
 }
 
 .main-section {
@@ -131,15 +180,14 @@
 }
 
 .main-section__title {
-  font-family: 'OSBold';
+  font-family: "OSBold";
   font-size: 58px;
   line-height: 68px;
   margin-bottom: 20px;
 }
 
 .main-section__text {
-  font-family: 'OSLight';
-  font-weight: 300;
+  font-family: "OSLight";
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 32px;
@@ -293,6 +341,45 @@
 .advantages .region-title {
   padding-top: 24px;
   padding-bottom: 16px;
+}
+
+.request {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: request;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 64px;
+  background-color: var(--c-aqua-haze);
+}
+
+.request__header {
+  text-align: center;
+  font-family: "OSReg";
+  font-size: 46px;
+  line-height: 54px;
+}
+
+.request__form {
+  width: 100%;
+  max-width: 456px;
+  margin-bottom: 64px;
+}
+
+.request__form-element {
+  margin-bottom: 32px;
 }
 
 .main-wrapper {

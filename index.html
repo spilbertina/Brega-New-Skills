@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozon New Skills</title>
-    <link rel="stylesheet" href="./scss/normalize.css">
-    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -103,7 +103,18 @@
             </div>
         </section>
         <section class="request">
-            
+            <h3 class="request__header">
+                Оставить заявку <br>
+                на бесплатное пробное занятие
+            </h3>
+            <div class="request__form">
+                <input type="text" name="city" class="input input_valid request__form-element" placeholder="Город" value="Москва">
+                <input type="tel"  name="telephone" class="input input_valid request__form-element" placeholder="Телефон" value="+ 7 900 666 15 15">
+                <!-- Пример значения с ошибкой -->
+                <input type="email" name="email" class="input input_invalid request__form-element" placeholder="E-mail" value="onsAozon.ru">
+                <!-- Пример значения по умолчанию -->
+                <input type="text" name="name" class="input request__form-element" placeholder="Имя и фамилия" value="">
+            </div>
         </section>
     </div>
 </body>
