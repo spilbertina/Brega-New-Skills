@@ -2,6 +2,7 @@
 @import './font';
 @import './header';
 @import './button';
+@import './input';
 @import './sections/main-section';
 @import './sections/courses';
 @import './sections/advantages';
@@ -20,6 +21,7 @@
         ". advantages ."
         "request request request";
     grid-template-columns: 92px 1fr 92px;
+    grid-template-rows: 100px;
     font-family: 'OSReg';
     color: var(--color-dark);
 }

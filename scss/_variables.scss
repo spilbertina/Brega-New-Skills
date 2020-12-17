@@ -7,9 +7,10 @@
     --c-dark-space: #1A3047;
     --valid-value: #06CA99;
     --invalid-value: #F91155;
+    --dark-space: #667585;
 }
 
-@mixin font($name, $size, $height:24px, $font-weight:300) {
+@mixin font($name, $size, $height:24px, $weight: 300) {
     font-family: $name;
     font-size: $size;
     line-height: $height;

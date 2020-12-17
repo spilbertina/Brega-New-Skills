@@ -7,6 +7,7 @@
   --c-dark-space: #1A3047;
   --valid-value: #06CA99;
   --invalid-value: #F91155;
+  --dark-space: #667585;
 }
 
 @font-face {
@@ -134,6 +135,42 @@
   border-color: var(--invalid-value);
 }
 
+.select {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  padding: 16px 20px;
+  border: 1px solid var(--c-mystic);
+  border-radius: 6px;
+  font-family: "OSReg";
+  font-size: 18px;
+  line-height: auto;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.select__text {
+  color: var(--dark space);
+}
+
+.select__icon_opened {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.select__dropdown {
+  position: absolute;
+  top: 60px;
+}
+
 .main-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +204,6 @@
 .main-section__info {
   color: var(--color-white);
   width: 500px;
-  height: 276px;
   padding: 0;
   margin-left: 110px;
   margin-bottom: 120px;
@@ -391,6 +427,8 @@
       grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages ." "request request request";
   -ms-grid-columns: 92px 1fr 92px;
       grid-template-columns: 92px 1fr 92px;
+  -ms-grid-rows: 100px;
+      grid-template-rows: 100px;
   font-family: 'OSReg';
   color: var(--color-dark);
 }
