@@ -170,7 +170,7 @@
 }
 
 .select__dropdown {
-  display: none;
+  visibility: hidden;
   position: absolute;
   width: 100%;
   padding: 0;
@@ -457,17 +457,47 @@
   margin-bottom: 32px;
 }
 
+.footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 220px;
+}
+
+.footer__info {
+  max-width: 432px;
+  max-height: 60px;
+  font-family: "OSReg";
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__navigation {
+  max-width: 181px;
+}
+
+.footer__logo-ozon {
+  max-width: 107px;
+}
+
 .main-wrapper {
   width: 100%;
   margin: 0 auto;
   max-width: 1600px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages ." "request request request";
+      grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages ." "request request request" ". footer .";
   -ms-grid-columns: 92px 1fr 92px;
       grid-template-columns: 92px 1fr 92px;
-  -ms-grid-rows: 100px;
-      grid-template-rows: 100px;
   font-family: 'OSReg';
   color: var(--color-dark);
 }
