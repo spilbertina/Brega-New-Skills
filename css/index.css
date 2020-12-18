@@ -170,6 +170,7 @@
 }
 
 .select__dropdown {
+  display: none;
   visibility: hidden;
   position: absolute;
   width: 100%;
