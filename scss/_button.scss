@@ -1,16 +1,16 @@
 .button {
-    font-family: 'OSLight';
-    font-size: 20px;
-    line-height: 20px;
+    @include font('OSLight', 20px, 20px);
     padding: 22px 32px;
     width: 208px;
     height: 64px;
+    border: none;
     border-radius: 8px;
     background: var(--color-ozon);
     color: var(--color-white);
-    border: none;
+    outline: none;
+    cursor: pointer;
 
-&_size {
-    width: 238px;
-}
+    &_size {
+        width: 238px;
+    }
 }

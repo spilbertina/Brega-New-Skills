@@ -1,0 +1,21 @@
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 220px;
+
+    &__info {
+        max-width: 432px;
+        max-height: 60px;
+        @include font('OSReg', 16px, 20px, auto);
+    }
+
+    &__navigation {
+        max-width: 181px;
+    }
+
+    &__logo-ozon {
+        max-width: 107px;
+    }
+}

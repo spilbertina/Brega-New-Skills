@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozon New Skills</title>
-    <link rel="stylesheet" href="./scss/normalize.css">
-    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div class="main-wrapper">
-        <header>
+        <header class="header">
             <div class="header__main-logo">
                 <img src="./img/Logo.svg" alt="">
             </div>
@@ -102,6 +102,56 @@
                 </div>
             </div>
         </section>
+        <section class="request">
+            <h3 class="request__header">
+                Оставить заявку <br>
+                на бесплатное пробное занятие
+            </h3>
+            <div class="request__form">
+                <input type="text" name="city" class="input input_valid request__form-element" placeholder="Город"
+                    value="Москва">
+                <input type="tel" name="telephone" class="input input_valid request__form-element" placeholder="Телефон"
+                    value="+ 7 900 666 15 15">
+                <!-- Пример значения с ошибкой -->
+                <input type="email" name="email" class="input input_invalid request__form-element" placeholder="E-mail"
+                    value="onsAozon.ru">
+                <!-- Пример значения по умолчанию -->
+                <input type="text" name="name" class="input request__form-element" placeholder="Имя и фамилия"
+                    value="Наталья Брега">
+                <div class="select request__form-element">
+                    <span class="select__text">Выберите курс</span>
+                    <img src="./img/icon.svg" alt="check mark" class="select__icon">
+                    <ul class="select__dropdown">
+                        <li class="select__dropdown-item">Select 1</li>
+                        <li class="select__dropdown-item select__dropdown-item_active">Select 2</li>
+                        <li class="select__dropdown-item">Select 3</li>
+                        <li class="select__dropdown-item">Select 4</li>
+                        <li class="select__dropdown-item">Select 5</li>
+                    </ul>
+                </div>
+                <input type="text" name="name" class="input input_valid " placeholder="Комментарий">
+            </div>
+            <button class="button button_size">
+                Отправить заявку
+            </button>
+        </section>
+        <footer class="footer">
+            <div class="footer__main-logo">
+                <img src="./img/Logo.svg" alt="">
+            </div>
+            <div class="footer__info">
+                © 2019 ООО «Интернет Решения». Все права защищены. Москва, Пресненская наб., 10, блок С ons@ozon.ru
+            </div>
+            <nav class="footer__navigation">
+                <a href="#" class="footer__navigation-link"><img src="./img/footer-Insta.svg" alt=""></a>
+                <a href="#" class="footer__navigation-link"><img src="./img/footer-Facebook.svg" alt=""></a>
+                <a href="#" class="footer__navigation-link"><img src="./img/footer-VK.svg" alt=""></a>
+                <a href="#" class="footer__navigation-link"><img src="./img/footer-Youtube.svg" alt=""></a>
+            </nav>
+            <div class="footer__logo-ozon">
+                <img src="./img/Logo-ozon.svg" alt="logo-ozon">
+            </div>
+        </footer>
     </div>
 </body>
 

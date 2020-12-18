@@ -2,13 +2,25 @@
     --color-white: white;
     --color-dark: #001A34;
     --color-ozon: #005BFF;
+    --color-ozon-blue-10: #E0EBFF;
+    --color-ozon-blue-50: #7FADFF;
+    --color-aqua-haze: #EFF3F6;
+    --color-cadet-blue: #B2BAC2;
+    --color-dark-space: #1A3047;
+    --color-valid-value: #06CA99;
+    --color-invalid-value: #F91155;
+    --color-dark-space: #667585;
+    --color-mystic: #E9EEF1;
+}
+
+@mixin font($name, $size, $height:24px, $weight: 300) {
+    font-family: $name;
+    font-size: $size;
+    line-height: $height;
 }
 
 @mixin p_main($font-size) {
-    font-weight: 300;
-    font-size: $font-size;
-    line-height: 24px;
-    font-family: 'OSLight';
+    @include font('OSLight', $font-size, 24px);
     margin: 0;
 }
 
