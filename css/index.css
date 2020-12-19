@@ -75,6 +75,15 @@
   color: var(--color-dark);
 }
 
+@media (max-width: 1200px) {
+  .header__tagline {
+    font-family: none;
+    font-size: none;
+    line-height: none;
+    color: none;
+  }
+}
+
 .button {
   font-family: "OSLight";
   font-size: 20px;
@@ -245,6 +254,7 @@
   color: var(--color-white);
   width: 500px;
   padding: 0;
+  padding-top: 80px;
   margin-left: 110px;
   margin-bottom: 120px;
 }
@@ -262,11 +272,28 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 1370px) {
+  .main-section__title {
+    font-family: "OSBold";
+    font-size: 46px;
+    line-height: 58px;
+    margin-bottom: 15px;
+  }
+}
+
 .main-section__text {
   font-family: "OSLight";
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 32px;
+}
+
+@media (max-width: 1370px) {
+  .main-section__text {
+    font-family: "OSLight";
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .courses {
@@ -277,6 +304,7 @@
   padding-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
 }
 
 .courses h3 {
@@ -356,9 +384,10 @@
   -ms-grid-row: 5;
   -ms-grid-column: 2;
   grid-area: advantages;
-  max-width: 1176px;
-  padding-left: 120px;
+  width: 1176px;
   padding-bottom: 106px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .advantages h3 {
@@ -501,5 +530,12 @@
       grid-template-columns: 92px 1fr 92px;
   font-family: 'OSReg';
   color: var(--color-dark);
+}
+
+@media (max-width: 1500px) {
+  .main-wrapper {
+    -ms-grid-columns: 46px 1fr 46px;
+        grid-template-columns: 46px 1fr 46px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

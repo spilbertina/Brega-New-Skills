@@ -21,6 +21,7 @@
         color: var(--color-white);
         width: 500px;
         padding: 0;
+        padding-top: 80px;
         margin-left: 110px;
         margin-bottom: 120px;
 
@@ -34,10 +35,19 @@
     &__title {
         @include font('OSBold', 58px, 68px);
         margin-bottom: 20px;
+
+        @media (max-width: 1370px) {
+            @include font('OSBold', 46px, 58px);
+            margin-bottom: 15px;
+        }
     }
 
     &__text {
         @include font('OSLight', 24px, 32px);
         margin-bottom: 32px;
+
+        @media (max-width: 1370px) {
+            @include font('OSLight', 20px, 28px);
+        }
     }
 }

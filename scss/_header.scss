@@ -23,5 +23,10 @@
     &__tagline {
         @include font('OSBold', 22px, 26px);
         color: var(--color-dark);
+
+        @media (max-width: 1200px) {
+            @include font(none, none, none);
+            color: none;
+        }
     }
 }
