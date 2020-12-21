@@ -1,9 +1,8 @@
 .advantages {
     grid-area: advantages;
-    width: 1176px;
     padding-bottom: 106px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 100px;
+    margin-right: 100px;
 
     h3 {
         @include font('OSReg', 46px, 54px);
@@ -21,8 +20,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 240px;
-        max-height: 210px;
+        // max-width: 240px;
+        // max-height: 210px;
         text-align: center;
 
         h4 {

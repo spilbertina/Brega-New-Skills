@@ -45,6 +45,12 @@
   min-height: 124px;
 }
 
+@media (max-width: 400px) {
+  .header__main-logo {
+    padding-left: 40px;
+  }
+}
+
 .header__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +63,12 @@
   font-family: "OSReg";
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (max-width: 400px) {
+  .header__navigation {
+    display: none;
+  }
 }
 
 .header__navigation-link {
@@ -75,12 +87,20 @@
   color: var(--color-dark);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 400px) {
   .header__tagline {
-    font-family: none;
-    font-size: none;
-    line-height: none;
-    color: none;
+    display: none;
+  }
+}
+
+.header__menu-mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .header__menu-mobile {
+    display: block;
+    padding-right: 40px;
   }
 }
 
@@ -229,7 +249,8 @@
           align-items: center;
   min-height: 708px;
   padding: 0;
-  background: center center no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -252,7 +273,6 @@
 
 .main-section__info {
   color: var(--color-white);
-  width: 500px;
   padding: 0;
   padding-top: 80px;
   margin-left: 110px;
@@ -260,9 +280,9 @@
 }
 
 .main-section__info_second {
-  margin-right: 270px;
+  margin-right: 220px;
   margin-bottom: 120px;
-  width: 420px;
+  margin-left: 0;
 }
 
 .main-section__title {
@@ -272,15 +292,6 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 1370px) {
-  .main-section__title {
-    font-family: "OSBold";
-    font-size: 46px;
-    line-height: 58px;
-    margin-bottom: 15px;
-  }
-}
-
 .main-section__text {
   font-family: "OSLight";
   font-size: 24px;
@@ -288,23 +299,18 @@
   margin-bottom: 32px;
 }
 
-@media (max-width: 1370px) {
-  .main-section__text {
-    font-family: "OSLight";
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-
 .courses {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: courses;
-  width: 1176px;
-  padding-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: auto;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media (max-width: 400px) {
+  .courses {
+    overflow-x: scroll;
+  }
 }
 
 .courses h3 {
@@ -327,6 +333,17 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 80px;
+  padding-right: 30px;
+}
+
+@media (max-width: 400px) {
+  .all-cards {
+    overflow-x: scroll;
+  }
 }
 
 .card {
@@ -338,7 +355,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 376px;
-  max-height: 376px;
   margin: 0;
   border: 1px solid #E9EEF1;
   -webkit-box-sizing: border-box;
@@ -355,7 +371,6 @@
 
 .card-info {
   padding: 32px 24px;
-  max-width: 328px;
 }
 
 .card-info h4 {
@@ -384,10 +399,9 @@
   -ms-grid-row: 5;
   -ms-grid-column: 2;
   grid-area: advantages;
-  width: 1176px;
   padding-bottom: 106px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .advantages h3 {
@@ -423,8 +437,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 240px;
-  max-height: 210px;
   text-align: center;
 }
 
@@ -522,7 +534,6 @@
 .main-wrapper {
   width: 100%;
   margin: 0 auto;
-  max-width: 1600px;
   display: -ms-grid;
   display: grid;
       grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages ." "request request request" ". footer .";
@@ -532,10 +543,10 @@
   color: var(--color-dark);
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 400px) {
   .main-wrapper {
-    -ms-grid-columns: 46px 1fr 46px;
-        grid-template-columns: 46px 1fr 46px;
+    -ms-grid-columns: 0 1fr 0;
+        grid-template-columns: 0 1fr 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

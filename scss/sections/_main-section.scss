@@ -3,12 +3,17 @@
     align-items: center;
     min-height: 708px;
     padding: 0;
-    background: center center no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
 
     &_first {
         grid-area: mainFirst;
         background-image: url('../img/image.jpg');
+
+        // @media (max-width: 400px) {
+        //     background-image: url('...');
+        // }
     }
 
     &_second {
@@ -19,16 +24,17 @@
 
     &__info {
         color: var(--color-white);
-        width: 500px;
+        // width: 500px;
         padding: 0;
         padding-top: 80px;
         margin-left: 110px;
         margin-bottom: 120px;
 
         &_second {
-            margin-right: 270px;
+            margin-right: 220px;
             margin-bottom: 120px;
-            width: 420px;
+            margin-left: 0;
+            // width: 420px;
         }
     }
 
@@ -36,18 +42,18 @@
         @include font('OSBold', 58px, 68px);
         margin-bottom: 20px;
 
-        @media (max-width: 1370px) {
-            @include font('OSBold', 46px, 58px);
-            margin-bottom: 15px;
-        }
+        // @media (max-width: 1370px) {
+        //     @include font('OSBold', 46px, 58px);
+        //     margin-bottom: 15px;
+        // }
     }
 
     &__text {
         @include font('OSLight', 24px, 32px);
         margin-bottom: 32px;
 
-        @media (max-width: 1370px) {
-            @include font('OSLight', 20px, 28px);
-        }
+        // @media (max-width: 1370px) {
+        //     @include font('OSLight', 20px, 28px);
+        // }
     }
 }

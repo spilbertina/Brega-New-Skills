@@ -12,7 +12,7 @@
 .main-wrapper {
     width: 100%;
     margin: 0 auto;
-    max-width: 1600px;
+    // max-width: 1600px;
     display: grid;
     grid-template-areas:
         ". header ."
@@ -27,9 +27,9 @@
     color: var(--color-dark);
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 400px) {
     .main-wrapper {
-        grid-template-columns: 46px 1fr 46px;
+        grid-template-columns: 0 1fr 0;
     }
 }
 
