@@ -7,13 +7,14 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    &__img {
+        width: 100%;
+        display: none;
+    }
+
     &_first {
         grid-area: mainFirst;
         background-image: url('../img/image.jpg');
-
-        // @media (max-width: 400px) {
-        //     background-image: url('...');
-        // }
     }
 
     &_second {
@@ -24,17 +25,19 @@
 
     &__info {
         color: var(--color-white);
-        // width: 500px;
         padding: 0;
         padding-top: 80px;
         margin-left: 110px;
         margin-bottom: 120px;
 
+        @media (max-width: 400px) {
+            background-color: var(--color-dark);
+        }
+
         &_second {
             margin-right: 220px;
             margin-bottom: 120px;
             margin-left: 0;
-            // width: 420px;
         }
     }
 
@@ -55,5 +58,25 @@
         // @media (max-width: 1370px) {
         //     @include font('OSLight', 20px, 28px);
         // }
+    }
+}
+
+@media (max-width: 400px) {
+    .main-section {
+        &__img {
+            display: block;
+
+            img {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        &_first {
+            display: flex;
+            flex-direction: column;
+            height: 708px;
+            background-image: none
+        }
     }
 }
