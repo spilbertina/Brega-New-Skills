@@ -1,5 +1,5 @@
 .button {
-    @include font('OSLight', 20px, 20px);
+    @include font('OSLight', 20px, 20px, 400);
     padding: 22px 32px;
     width: 208px;
     height: 64px;
@@ -14,3 +14,12 @@
         width: 238px;
     }
 }
+
+@media (max-width: 400px) {
+    .button  {
+        @include font('OSReg', 26px, 30px, 400);
+        width: 95%;
+        height: 76px;
+        margin-left: 20px;
+        }
+    }
