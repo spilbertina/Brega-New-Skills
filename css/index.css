@@ -11,6 +11,7 @@
   --color-invalid-value: #F91155;
   --color-dark-space: #667585;
   --color-mystic: #E9EEF1;
+  --color-geyser: #CCD4DB;
 }
 
 @font-face {
@@ -128,9 +129,9 @@
     font-family: "OSReg";
     font-size: 26px;
     line-height: 30px;
-    width: 95%;
+    width: 90%;
     height: 76px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
@@ -269,11 +270,17 @@
   display: none;
 }
 
+.main-section__img_second {
+  width: 100%;
+  display: none;
+}
+
 .main-section_first {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: mainFirst;
   background-image: url("../img/image.jpg");
+  line-height: 0;
 }
 
 .main-section_second {
@@ -284,6 +291,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  line-height: 0;
 }
 
 .main-section__info {
@@ -319,14 +327,15 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main-section__img {
+  .main-section__img, .main-section__img_second {
     display: block;
   }
-  .main-section__img img {
+  .main-section__img img, .main-section__img_second img {
     width: 100%;
     margin: 0;
+    border-bottom: none;
   }
-  .main-section_first {
+  .main-section_first, .main-section_second {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -337,6 +346,10 @@
     min-height: 708px;
     background-image: none;
   }
+  .main-section_second {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #1A3047), color-stop(100%, transparent), to(url(../../img/mobile-second-shadow.jpg)));
+    background: linear-gradient(to top, #1A3047 50%, transparent 100%, url(../../img/mobile-second-shadow.jpg));
+  }
   .main-section__info {
     width: 100%;
     background-color: var(--color-dark);
@@ -344,18 +357,21 @@
     padding-top: 0;
     padding-bottom: 80px;
   }
+  .main-section__info_second {
+    background-color: var(--color-geyser);
+  }
   .main-section__title {
     font-family: "OSReg";
     font-size: 46px;
     line-height: 56px;
-    padding-left: 20px;
+    padding-left: 40px;
   }
   .main-section__text {
     font-family: "OSReg";
     font-size: 26px;
     line-height: 46px;
     width: 80%;
-    padding-left: 20px;
+    padding-left: 40px;
   }
 }
 

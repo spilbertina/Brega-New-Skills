@@ -11,15 +11,22 @@
         display: none;
     }
 
+    &__img_second {
+        width: 100%;
+        display: none;
+    }
+
     &_first {
         grid-area: mainFirst;
         background-image: url('../img/image.jpg');
+        line-height: 0;
     }
 
     &_second {
         grid-area: mainSecond;
         background-image: url('../img/image2.jpg');
         justify-content: flex-end;
+        line-height: 0;
     }
 
     &__info {
@@ -49,41 +56,54 @@
     .main-section {
         flex-direction: column;
 
-        &__img {
+        //width: 400px;
+        &__img,
+        &__img_second {
             display: block;
 
             img {
+                //width: calc(100%-10px);
                 width: 100%;
                 margin: 0;
+                border-bottom: none;
             }
         }
 
-        &_first {
+        &_first,
+        &_second {
             display: flex;
             flex-direction: column;
             min-height: 708px;
             background-image: none
         }
 
-        &__info {
-            // width: calc(100% - 20px);
-            width: 100%;
-            background-color: var(--color-dark);
-            margin: 0;
-            padding-top: 0;
-            padding-bottom: 80px;
+        &_second {
+            background: linear-gradient(to top, #1A3047 50%, transparent 100%, url(../../img/mobile-second-shadow.jpg)); 
         }
 
-        &__title {
-            @include font('OSReg', 46px, 56px, 500);
-            padding-left: 20px;
+    &__info {
+        //width: calc(100% - 10px);
+        width: 100%;
+        background-color: var(--color-dark);
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 80px;
 
-        }
-
-        &__text {
-            @include font('OSReg', 26px, 46px, auto);
-            width: 80%;
-            padding-left: 20px;
+        &_second {
+            background-color: var(--color-geyser);
         }
     }
+
+    &__title {
+        @include font('OSReg', 46px, 56px, 500);
+        padding-left: 40px;
+
+    }
+
+    &__text {
+        @include font('OSReg', 26px, 46px, auto);
+        width: 80%;
+        padding-left: 40px;
+    }
+}
 }

@@ -18,8 +18,8 @@
 @media (max-width: 400px) {
     .button  {
         @include font('OSReg', 26px, 30px, 400);
-        width: 95%;
+        width: 90%;
         height: 76px;
-        margin-left: 20px;
+        margin-left: 40px;
         }
     }
