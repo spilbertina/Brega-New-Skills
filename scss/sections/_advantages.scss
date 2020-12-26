@@ -1,19 +1,28 @@
 .advantages {
     grid-area: advantages;
     padding-bottom: 106px;
-    margin-left: 100px;
-    margin-right: 100px;
+    // margin-left: 100px;
+     //margin-right: 100px;
+
+    //  @media (max-width: 400px) {
+    //     overflow-x: scroll;
+    //  }
 
     h3 {
-        @include font('OSReg', 46px, 54px);
+        @include font('OSReg', 46px, 54px, 500);
         display: flex;
         justify-content: center;
         margin: 68px 0;
     }
 
+    img{
+        max-width: 72px;
+        max-height: 65px;
+    }
+
     .all-advantages {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     
     .region {
@@ -25,15 +34,20 @@
         text-align: center;
 
         h4 {
-            @include h4_main;
+            //@include h4_main;
+            @include font('OSReg', 24px, 28px, 500);
         }
 
         p {
-            @include p_main(16px)
+            @include font('OSReg', 18px, 26px, auto);
         }
         &-title {
             padding-top: 24px;
             padding-bottom: 16px;
         }
     }
+}
+
+@media (max-width: 400px) {
+
 }

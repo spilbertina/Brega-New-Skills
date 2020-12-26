@@ -32,7 +32,7 @@
     }
 
     &__tagline {
-        @include font('OSBold', 22px, 26px);
+        @include font('OSBold', 22px, 26px, 500);
         color: var(--color-dark);
 
         @media (max-width: 400px) {

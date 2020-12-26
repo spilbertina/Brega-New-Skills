@@ -22,3 +22,12 @@
         margin-bottom: 32px;
     }
 }
+
+@media (max-width: 400px) {
+    .request {
+        &__header {
+            max-width: 400px;
+            @include font('OSReg', 36px, 42px, 500);
+        }
+    }
+}

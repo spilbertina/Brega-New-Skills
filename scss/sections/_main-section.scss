@@ -2,9 +2,7 @@
     display: flex;
     align-items: center;
     min-height: 708px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    line-height: 0;
 
     &__img {
         width: 100%;
@@ -18,15 +16,13 @@
 
     &_first {
         grid-area: mainFirst;
-        background-image: url('../img/image.jpg');
-        line-height: 0;
+        @include background-image('../img/image.jpg', center top);
     }
 
     &_second {
         grid-area: mainSecond;
-        background-image: url('../img/image2.jpg');
+        @include background-image('../img/image2.jpg', left top);
         justify-content: flex-end;
-        line-height: 0;
     }
 
     &__info {
@@ -36,7 +32,7 @@
         margin-bottom: 120px;
 
         &_second {
-            margin-right: 200px;
+            margin-right: 7%;
         }
     }
 
@@ -56,13 +52,11 @@
     .main-section {
         flex-direction: column;
 
-        //width: 400px;
         &__img,
         &__img_second {
             display: block;
 
             img {
-                //width: calc(100%-10px);
                 width: 100%;
                 margin: 0;
                 border-bottom: none;
@@ -78,32 +72,29 @@
         }
 
         &_second {
-            background: linear-gradient(to top, #1A3047 50%, transparent 100%, url(../../img/mobile-second-shadow.jpg)); 
+            background: linear-gradient(to top, #1A3047 50%, transparent 100%, url(../../img/mobile-second-shadow.jpg));
         }
 
-    &__info {
-        //width: calc(100% - 10px);
-        width: 100%;
-        background-color: var(--color-dark);
-        margin: 0;
-        padding-top: 0;
-        padding-bottom: 80px;
+        &__info {
+            width: 100%;
+            background-color: var(--color-dark);
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 80px;
 
-        &_second {
-            background-color: var(--color-geyser);
+            &_second {
+                background-color: var(--color-geyser);
+            }
+        }
+
+        &__title {
+            @include font('OSReg', 46px, 56px, 500);
+
+        }
+
+        &__text {
+            @include font('OSReg', 26px, 46px, auto);
+            width: 80%;
         }
     }
-
-    &__title {
-        @include font('OSReg', 46px, 56px, 500);
-        padding-left: 40px;
-
-    }
-
-    &__text {
-        @include font('OSReg', 26px, 46px, auto);
-        width: 80%;
-        padding-left: 40px;
-    }
-}
 }

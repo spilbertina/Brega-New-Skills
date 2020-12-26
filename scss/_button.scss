@@ -17,9 +17,14 @@
 
 @media (max-width: 400px) {
     .button  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @include font('OSReg', 26px, 30px, 400);
         width: 90%;
         height: 76px;
-        margin-left: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        // margin-left: 40px;
         }
     }

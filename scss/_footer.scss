@@ -1,9 +1,15 @@
 .footer {
+    // --nav-width: 581px;
+
     grid-area: footer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 220px;
+
+    &__tagline {
+        display: none;
+    }
 
     &__info {
         max-width: 432px;
@@ -11,11 +17,37 @@
         @include font('OSReg', 16px, 20px, auto);
     }
 
-    &__navigation {
-        max-width: 181px;
-    }
+    // &__navigation {
+    //     width: var(--nav-width);
+    // }
 
     &__logo-ozon {
         max-width: 107px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer {
+        --nav-width: 300px;
+
+        flex-direction: column;
+        height: 473px;
+        justify-content: space-around;
+
+        &__tagline {
+            display: block;
+            @include font('OSBold', 22px, 26px, 500);
+            color: var(--color-dark);
+        }
+
+        &__info {
+            text-align: center;
+        }
+
+        &__navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+        }
     }
 }
