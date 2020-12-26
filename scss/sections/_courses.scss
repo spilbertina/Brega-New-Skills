@@ -2,7 +2,9 @@
     grid-area: courses;
     overflow-x: scroll;
     h3 {
-        @include font('OSReg', 46px, 54px)
+        @include font('OSReg', 46px, 54px);
+        display: flex;
+        justify-content: center;
     }
 }
 

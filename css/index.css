@@ -397,6 +397,12 @@
   font-family: "OSReg";
   font-size: 46px;
   line-height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .all-cards {
@@ -487,7 +493,8 @@
   -ms-grid-row: 5;
   -ms-grid-column: 2;
   grid-area: advantages;
-  padding-bottom: 106px;
+  overflow-x: scroll;
+  padding-bottom: 80px;
 }
 
 .advantages h3 {
@@ -500,23 +507,27 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 68px 0;
+  margin: 66px 0;
 }
 
-.advantages img {
-  max-width: 72px;
-  max-height: 65px;
-}
-
-.advantages .all-advantages {
+.all-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1200px;
+  max-width: 1300px;
+  overflow-x: scroll;
 }
 
-.advantages .region {
+.region {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,24 +538,74 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 240px;
+}
+
+.region-img {
+  width: 72px;
+  height: 56px;
+}
+
+.region-info {
   text-align: center;
 }
 
-.advantages .region h4 {
-  font-family: "OSReg";
+.region-info h4 {
+  font-weight: 500;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  padding-bottom: 16px;
+  margin-top: 37px;
 }
 
-.advantages .region p {
+.region-info p {
   font-family: "OSReg";
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
+  text-align: center;
 }
 
-.advantages .region-title {
-  padding-top: 24px;
-  padding-bottom: 16px;
+@media (max-width: 400px) {
+  .advantages h3 {
+    font-family: "OSReg";
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 56px;
+    margin-bottom: 26px;
+  }
+  .all-advantages {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .region {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 276px;
+    height: 274px;
+    border: 1px solid #E9EEF1;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 2px 2px 20px #E9EEF1;
+            box-shadow: 2px 2px 20px #E9EEF1;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .region-img {
+    padding-top: 33px;
+    padding-left: 24px;
+  }
+  .region-info {
+    padding-bottom: 32px;
+    padding-left: 24px;
+    text-align: start;
+  }
+  .region-info p {
+    text-align: left;
+  }
 }
 
 .request {
