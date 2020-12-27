@@ -2,42 +2,135 @@
     display: flex;
     align-items: center;
     min-height: 708px;
-    padding: 0;
-    background: center center no-repeat;
-    background-size: cover;
+    line-height: 0;
+
+    &__img {
+        width: 100%;
+        display: none;
+    }
+
+    &__img_second {
+        width: 100%;
+        display: none;
+    }
 
     &_first {
         grid-area: mainFirst;
-        background-image: url('../img/image.jpg');
+        @include background-image('../img/image.jpg', center top);
     }
 
     &_second {
         grid-area: mainSecond;
-        background-image: url('../img/image2.jpg');
+        @include background-image('../img/image2.jpg', left top);
         justify-content: flex-end;
     }
 
     &__info {
         color: var(--color-white);
-        width: 500px;
-        padding: 0;
-        margin-left: 110px;
-        margin-bottom: 120px;
+        margin-left: 7%;
+        margin-bottom: 3%;
 
         &_second {
-            margin-right: 270px;
-            margin-bottom: 120px;
-            width: 420px;
+            margin-right: 7%;
         }
     }
 
     &__title {
-        @include font('OSBold', 58px, 68px);
+        @include font('OSBold', 58px, 68px, 700);
         margin-bottom: 20px;
     }
 
     &__text {
-        @include font('OSLight', 24px, 32px);
+        width: 500px;
+        @include font('OSLight', 24px, 32px, auto);
         margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .main-section {
+        align-items: flex-end;
+
+        &__info {
+            margin-left: 5%;
+            margin-bottom: 7%;
+
+            &_second {
+                margin-right: 0%;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .main-section {
+        &__info {
+            &_second {
+                margin-right: 3%;
+            }
+        }
+        &__title {
+            @include font('OSBold', 46px, 60px, 600);
+        }
+
+        &__text {
+            width: 370px;
+            @include font('OSReg', 20px, 28px, auto);
+            
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .main-section {
+        flex-direction: column;
+
+        &__img,
+        &__img_second {
+            display: block;
+
+            img {
+                width: 100%;
+                margin: 0;
+                border-bottom: none;
+            }
+        }
+
+        &_first,
+        &_second {
+            display: flex;
+            flex-direction: column;
+            min-height: 708px;
+            background-image: none
+        }
+
+        &_second {
+            background: linear-gradient(to top, #1A3047 50%, transparent 100%, url(../../img/mobile-second-shadow.jpg));
+        }
+
+        &__info {
+            width: 100%;
+            background-color: var(--color-dark);
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 80px;
+
+            &_second {
+                background-color: var(--color-geyser);
+                color: var(--color-dark);
+            }
+        }
+
+        &__title {
+            @include font('OSReg', 36px, 42px, 500);
+            margin-left: 20px;
+
+        }
+
+        &__text {
+            @include font('OSReg', 18px, 26px, auto);
+            width: 80%;
+            margin-left: 20px;
+        }
     }
 }

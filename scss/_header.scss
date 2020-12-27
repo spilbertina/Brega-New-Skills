@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 124px;
+    height: 124px;
 
     &__navigation {
         display: flex;
@@ -21,7 +21,72 @@
     }
 
     &__tagline {
-        @include font('OSBold', 22px, 26px);
+        @include font('OSBold', 22px, 26px, 500);
         color: var(--color-dark);
+    }
+
+    &__menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1180px) {
+    .header {
+        &__tagline {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .header {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        &__navigation {
+            display: none;
+
+            &-link {
+                display: none;
+            }
+        }
+
+        &__menu-mobile {
+            display: block;
+
+            img {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        height: 76px;
+        // justify-content: space-around;
+
+        img {
+            width: 120px;
+            height: 38px;
+        }
+
+        &__navigation {
+            display: none;
+        }
+
+        &__tagline {
+            display: none;
+        }
+
+        &__menu-mobile {
+            display: block;
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
     }
 }

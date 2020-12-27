@@ -11,6 +11,7 @@
   --color-invalid-value: #F91155;
   --color-dark-space: #667585;
   --color-mystic: #E9EEF1;
+  --color-geyser: #CCD4DB;
 }
 
 @font-face {
@@ -42,7 +43,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 124px;
+  height: 124px;
 }
 
 .header__navigation {
@@ -75,7 +76,69 @@
   color: var(--color-dark);
 }
 
+.header__menu-mobile {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  .header__tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .header__navigation {
+    display: none;
+  }
+  .header__navigation-link {
+    display: none;
+  }
+  .header__menu-mobile {
+    display: block;
+  }
+  .header__menu-mobile img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    height: 76px;
+  }
+  .header img {
+    width: 120px;
+    height: 38px;
+  }
+  .header__navigation {
+    display: none;
+  }
+  .header__tagline {
+    display: none;
+  }
+  .header__menu-mobile {
+    display: block;
+  }
+  .header__menu-mobile img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "OSLight";
   font-size: 20px;
   line-height: 20px;
@@ -92,6 +155,18 @@
 
 .button_size {
   width: 238px;
+}
+
+@media (max-width: 400px) {
+  .button {
+    font-family: "OSReg";
+    font-size: 18px;
+    line-height: 24px;
+    width: 90%;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .input {
@@ -211,6 +286,19 @@
   background-color: var(--color-ozon-blue-50);
 }
 
+@media (max-width: 550px) {
+  .input {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .select {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .main-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,9 +307,17 @@
       -ms-flex-align: center;
           align-items: center;
   min-height: 708px;
-  padding: 0;
-  background: center center no-repeat;
-  background-size: cover;
+  line-height: 0;
+}
+
+.main-section__img {
+  width: 100%;
+  display: none;
+}
+
+.main-section__img_second {
+  width: 100%;
+  display: none;
 }
 
 .main-section_first {
@@ -229,13 +325,19 @@
   -ms-grid-column: 2;
   grid-area: mainFirst;
   background-image: url("../img/image.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-section_second {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 2;
   grid-area: mainSecond;
   background-image: url("../img/image2.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -243,16 +345,12 @@
 
 .main-section__info {
   color: var(--color-white);
-  width: 500px;
-  padding: 0;
-  margin-left: 110px;
-  margin-bottom: 120px;
+  margin-left: 7%;
+  margin-bottom: 3%;
 }
 
 .main-section__info_second {
-  margin-right: 270px;
-  margin-bottom: 120px;
-  width: 420px;
+  margin-right: 7%;
 }
 
 .main-section__title {
@@ -263,23 +361,105 @@
 }
 
 .main-section__text {
+  width: 500px;
   font-family: "OSLight";
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 32px;
 }
 
-.courses {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: courses;
-  width: 1176px;
-  padding-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 1240px) {
+  .main-section {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .main-section__info {
+    margin-left: 5%;
+    margin-bottom: 7%;
+  }
+  .main-section__info_second {
+    margin-right: 0%;
+  }
 }
 
-.courses h3 {
+@media (max-width: 550px) {
+  .main-section__info_second {
+    margin-right: 3%;
+  }
+  .main-section__title {
+    font-family: "OSBold";
+    font-size: 46px;
+    line-height: 60px;
+  }
+  .main-section__text {
+    width: 370px;
+    font-family: "OSReg";
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-section__img, .main-section__img_second {
+    display: block;
+  }
+  .main-section__img img, .main-section__img_second img {
+    width: 100%;
+    margin: 0;
+    border-bottom: none;
+  }
+  .main-section_first, .main-section_second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 708px;
+    background-image: none;
+  }
+  .main-section_second {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #1A3047), color-stop(100%, transparent), to(url(../../img/mobile-second-shadow.jpg)));
+    background: linear-gradient(to top, #1A3047 50%, transparent 100%, url(../../img/mobile-second-shadow.jpg));
+  }
+  .main-section__info {
+    width: 100%;
+    background-color: var(--color-dark);
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  .main-section__info_second {
+    background-color: var(--color-geyser);
+    color: var(--color-dark);
+  }
+  .main-section__title {
+    font-family: "OSReg";
+    font-size: 36px;
+    line-height: 42px;
+    margin-left: 20px;
+  }
+  .main-section__text {
+    font-family: "OSReg";
+    font-size: 18px;
+    line-height: 26px;
+    width: 80%;
+    margin-left: 20px;
+  }
+}
+
+.name-courses {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,14 +471,29 @@
   line-height: 54px;
 }
 
+.courses {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: courses;
+  overflow-x: scroll;
+}
+
 .all-cards {
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 1200px;
+  max-width: 1300px;
+  padding-bottom: 80px;
+  overflow-x: scroll;
 }
 
 .card {
@@ -309,9 +504,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 376px;
-  max-height: 376px;
-  margin: 0;
+  width: 376px;
+  height: 386px;
   border: 1px solid #E9EEF1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -323,11 +517,11 @@
 .card-img {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  width: 100%;
 }
 
 .card-info {
   padding: 32px 24px;
-  max-width: 328px;
 }
 
 .card-info h4 {
@@ -352,16 +546,31 @@
   line-height: 24px;
 }
 
-.advantages {
-  -ms-grid-row: 5;
-  -ms-grid-column: 2;
-  grid-area: advantages;
-  max-width: 1176px;
-  padding-left: 120px;
-  padding-bottom: 106px;
+@media (max-width: 950px) {
+  .name-courses {
+    font-family: "OSReg";
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .courses h3 {
+    font-family: "OSReg";
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .all-cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    min-width: 900px;
+    max-width: 1000px;
+    padding-bottom: 56px;
+  }
+  .card {
+    width: 276px;
+    height: 430px;
+  }
 }
 
-.advantages h3 {
+.name-advantages {
   font-family: "OSReg";
   font-size: 46px;
   line-height: 54px;
@@ -371,19 +580,39 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 68px 0;
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: name2;
+  margin-top: 66px;
+  margin-bottom: 66px;
 }
 
-.advantages .all-advantages {
+.advantages {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: advantages;
+  overflow-x: scroll;
+  padding-bottom: 80px;
+}
+
+.all-advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1200px;
+  max-width: 1300px;
+  overflow-x: scroll;
 }
 
-.advantages .region {
+.region {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,33 +623,81 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 240px;
-  max-height: 210px;
+  width: 240px;
+}
+
+.region-img {
+  width: 72px;
+  height: 56px;
+}
+
+.region-info {
   text-align: center;
 }
 
-.advantages .region h4 {
+.region-info h4 {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   margin: 0;
   padding-bottom: 16px;
+  margin-top: 37px;
 }
 
-.advantages .region p {
-  font-family: "OSLight";
-  font-size: 16px;
-  line-height: 24px;
+.region-info p {
+  font-family: "OSReg";
+  font-size: 18px;
+  line-height: 26px;
   margin: 0;
+  text-align: center;
 }
 
-.advantages .region-title {
-  padding-top: 24px;
-  padding-bottom: 16px;
+@media (max-width: 950px) {
+  .name-advantages {
+    font-family: "OSReg";
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 56px;
+    margin-bottom: 0;
+  }
+  .advantages {
+    padding-bottom: 0;
+  }
+  .all-advantages {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .region {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 276px;
+    height: 274px;
+    border: 1px solid #E9EEF1;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 2px 2px 20px #E9EEF1;
+            box-shadow: 2px 2px 20px #E9EEF1;
+    border-radius: 12px;
+    margin-top: 36px;
+    margin-bottom: 56px;
+  }
+  .region-img {
+    padding-top: 33px;
+    padding-left: 24px;
+  }
+  .region-info {
+    padding-bottom: 32px;
+    padding-left: 24px;
+    text-align: start;
+  }
+  .region-info p {
+    text-align: left;
+  }
 }
 
 .request {
-  -ms-grid-row: 6;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: request;
@@ -446,6 +723,8 @@
   font-family: "OSReg";
   font-size: 46px;
   line-height: 54px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .request__form {
@@ -458,8 +737,17 @@
   margin-bottom: 32px;
 }
 
+@media (max-width: 400px) {
+  .request__header {
+    max-width: 90%;
+    font-family: "OSReg";
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
 .footer {
-  -ms-grid-row: 7;
+  -ms-grid-row: 9;
   -ms-grid-column: 2;
   grid-area: footer;
   display: -webkit-box;
@@ -474,32 +762,107 @@
   min-height: 220px;
 }
 
+.footer__tagline {
+  display: none;
+}
+
 .footer__info {
-  max-width: 432px;
-  max-height: 60px;
+  width: 40%;
   font-family: "OSReg";
   font-size: 16px;
   line-height: 20px;
-}
-
-.footer__navigation {
-  max-width: 181px;
 }
 
 .footer__logo-ozon {
   max-width: 107px;
 }
 
+@media (max-width: 1180px) {
+  .footer {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .footer__logo-ozon {
+    display: none;
+  }
+}
+
+@media (max-width: 805px) {
+  .footer__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__main-logo {
+    display: none;
+  }
+  .footer__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 473px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer__main-logo {
+    display: block;
+  }
+  .footer__tagline {
+    display: block;
+    font-family: "OSBold";
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--color-dark);
+  }
+  .footer__info {
+    text-align: center;
+    width: 82%;
+  }
+  .footer__logo-ozon {
+    margin-bottom: 7%;
+  }
+}
+
 .main-wrapper {
   width: 100%;
   margin: 0 auto;
-  max-width: 1600px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". header ." ". mainFirst ." ". courses ." ". mainSecond ." ". advantages ." "request request request" ". footer .";
+      grid-template-areas: ". header ." ". mainFirst ." ". name1 ." ". courses ." ". mainSecond ." ". name2 ." ". advantages ." "request request request" ". footer .";
   -ms-grid-columns: 92px 1fr 92px;
       grid-template-columns: 92px 1fr 92px;
   font-family: 'OSReg';
   color: var(--color-dark);
+}
+
+@media (max-width: 950px) {
+  .main-wrapper {
+    -ms-grid-columns: 0 1fr 0;
+        grid-template-columns: 0 1fr 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */

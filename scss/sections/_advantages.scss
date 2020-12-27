@@ -1,39 +1,94 @@
+.name-advantages {
+    @include font('OSReg', 46px, 54px, 500);
+    display: flex;
+    justify-content: center;
+    grid-area: name2;
+    margin-top: 66px;
+    margin-bottom: 66px;
+}
+
 .advantages {
     grid-area: advantages;
-    max-width: 1176px;
-    padding-left: 120px;
-    padding-bottom: 106px;
+    overflow-x: scroll;
+    padding-bottom: 80px;
+}
 
-    h3 {
-        @include font('OSReg', 46px, 54px);
-        display: flex;
-        justify-content: center;
-        margin: 68px 0;
+.all-advantages {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1200px;
+    max-width: 1300px;
+    overflow-x: scroll;
+}
+
+.region {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+
+    &-img {
+        width: 72px;
+        height: 56px;
     }
 
-    .all-advantages {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .region {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 240px;
-        max-height: 210px;
+    &-info {
         text-align: center;
-
         h4 {
             @include h4_main;
+            margin-top: 37px;
         }
 
         p {
-            @include p_main(16px)
+            @include font('OSReg', 18px, 26px, auto);
+            margin: 0;
+            text-align: center;
         }
-        &-title {
-            padding-top: 24px;
-            padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 950px) {
+    .name-advantages {
+        @include font('OSReg', 36px, 42px, 500);
+        margin-top: 56px;
+        margin-bottom: 0;
+    }
+
+    .advantages {
+        padding-bottom: 0;
+    }
+
+    .all-advantages {
+        justify-content: space-around;
+    }
+
+    .region {
+        align-items: flex-start;
+        width: 276px;
+        height: 274px;
+        border: 1px solid #E9EEF1;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 20px #E9EEF1;
+        border-radius: 12px;
+        margin-top: 36px;
+        margin-bottom: 56px;
+
+        &-img {
+            padding-top: 33px;
+            padding-left: 24px;
+        }
+
+        &-info {
+            padding-bottom: 32px;
+            padding-left: 24px;
+            text-align: start;
+
+            p {
+                text-align: left;
+            }
         }
     }
 }

@@ -11,6 +11,7 @@
     --color-invalid-value: #F91155;
     --color-dark-space: #667585;
     --color-mystic: #E9EEF1;
+    --color-geyser: #CCD4DB;
 }
 
 @mixin font($name, $size, $height:24px, $weight: 300) {
@@ -30,4 +31,11 @@
     line-height: 28px;
     margin: 0;
     padding-bottom: 16px;
+}
+
+@mixin background-image($path, $position) {
+    background-image: url($path);
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

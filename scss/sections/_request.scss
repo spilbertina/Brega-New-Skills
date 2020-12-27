@@ -10,6 +10,8 @@
     &__header {
         text-align: center;
         @include font('OSReg', 46px, 54px, 500);
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     &__form {
@@ -20,5 +22,16 @@
 
     &__form-element {
         margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 400px) {
+    .request {
+        &__header {
+            max-width: 90%;
+            // margin-left: 5%;
+            // margin-right: 5%;
+            @include font('OSReg', 36px, 42px, 500);
+        }
     }
 }

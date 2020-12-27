@@ -1,29 +1,33 @@
+.name-courses {
+    grid-area: name1;
+    display: flex;
+    justify-content: center;
+    @include font('OSReg', 46px, 54px, 500);
+}
+
 .courses {
     grid-area: courses;
-    width: 1176px;
-    padding-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-
-    h3 {
-        display: flex;
-        justify-content: center;
-        @include font('OSReg', 46px, 54px)
-    }
+    overflow-x: scroll;
 }
 
 .all-cards {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    min-width: 1200px;
+    max-width: 1300px;
+    padding-bottom: 80px;
+    overflow-x: scroll;
+
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    max-width: 376px;
-    max-height: 376px;
-    margin: 0;
+    width: 376px;
+    height: 386px;
     border: 1px solid #E9EEF1;
     box-sizing: border-box;
     box-shadow: 2px 2px 20px #E9EEF1;
@@ -32,11 +36,11 @@
     &-img {
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
+        width: 100%;
     }
 
     &-info {
         padding: 32px 24px;
-        max-width: 328px;
 
         h4 {
             @include h4_main;
@@ -52,5 +56,29 @@
             font-size: 18px;
             line-height: 24px;
         }
+    }
+}
+
+@media (max-width: 950px) {
+    .name-courses {
+        @include font('OSReg', 36px, 42px, 500);
+    }
+
+    .courses {
+        h3 {
+            @include font('OSReg', 36px, 42px, 500);
+        }
+    }
+
+    .all-cards {
+        justify-content: space-around;
+        min-width: 900px;
+        max-width: 1000px;
+        padding-bottom: 56px;
+    }
+
+    .card {
+        width: 276px;
+        height: 430px;
     }
 }

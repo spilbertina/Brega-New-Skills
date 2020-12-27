@@ -1,5 +1,8 @@
 .button {
-    @include font('OSLight', 20px, 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font('OSLight', 20px, 20px, 400);
     padding: 22px 32px;
     width: 208px;
     height: 64px;
@@ -14,3 +17,13 @@
         width: 238px;
     }
 }
+
+@media (max-width: 400px) {
+    .button  {
+        @include font('OSReg', 18px, 24px, 400);
+        width: 90%;
+        height: 56px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    }

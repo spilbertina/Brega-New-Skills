@@ -5,17 +5,78 @@
     align-items: center;
     min-height: 220px;
 
-    &__info {
-        max-width: 432px;
-        max-height: 60px;
-        @include font('OSReg', 16px, 20px, auto);
+    &__tagline {
+        display: none;
     }
 
-    &__navigation {
-        max-width: 181px;
+    &__info {
+        width: 40%;
+        @include font('OSReg', 16px, 20px, auto);
     }
 
     &__logo-ozon {
         max-width: 107px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .footer {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        &__logo-ozon {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 805px) {
+    .footer {
+        &__navigation {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        &__main-logo {
+            display: none;
+        }
+
+        &__navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .footer {
+        flex-direction: column;
+        height: 473px;
+        justify-content: space-around;
+
+        &__main-logo {
+            display: block;
+        }
+
+        &__tagline {
+            display: block;
+            @include font('OSBold', 22px, 26px, 500);
+            color: var(--color-dark);
+        }
+
+        &__info {
+            text-align: center;
+            width: 82%;
+        }
+
+        &__logo-ozon {
+            margin-bottom: 7%;
+        }
     }
 }
