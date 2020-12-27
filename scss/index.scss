@@ -17,8 +17,10 @@
     grid-template-areas:
         ". header ."
         ". mainFirst ."
+        ". name1 ."
         ". courses ."
         ". mainSecond ."
+        ". name2 ."
         ". advantages ."
         "request request request"
         ". footer .";
@@ -27,7 +29,7 @@
     color: var(--color-dark);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 950px) {
     .main-wrapper {
         grid-template-columns: 0 1fr 0;
     }

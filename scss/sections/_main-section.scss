@@ -84,17 +84,20 @@
 
             &_second {
                 background-color: var(--color-geyser);
+                color: var(--color-dark);
             }
         }
 
         &__title {
-            @include font('OSReg', 46px, 56px, 500);
+            @include font('OSReg', 36px, 42px, 500);
+            margin-left: 20px;
 
         }
 
         &__text {
-            @include font('OSReg', 26px, 46px, auto);
+            @include font('OSReg', 18px, 26px, auto);
             width: 80%;
+            margin-left: 20px;
         }
     }
 }

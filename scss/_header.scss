@@ -3,13 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 124px;
-
-    &__main-logo {
-        @media (max-width: 400px) {
-            padding-left: 20px;
-        }
-    }
+    height: 124px;
 
     &__navigation {
         display: flex;
@@ -17,11 +11,6 @@
         max-width: 520px;
         width: 100%;
         @include font('OSReg', 16px, 20px);
-
-
-        @media (max-width: 400px) {
-            display: none;
-        }
 
         &-link {
             height: 20px;
@@ -34,18 +23,72 @@
     &__tagline {
         @include font('OSBold', 22px, 26px, 500);
         color: var(--color-dark);
+    }
 
-        @media (max-width: 400px) {
+    &__menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1180px) {
+    .header {
+        &__tagline {
             display: none;
         }
     }
-    
-    &__menu-mobile {
-        display: none;
+}
 
-        @media (max-width: 400px) {
+@media (max-width: 950px) {
+    .header {
+        &__navigation {
+            display: none;
+
+            &-link {
+                display: none;
+            }
+        }
+
+        &__menu-mobile {
             display: block;
-            padding-right: 40px;
+
+            img {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        height: 76px;
+        // justify-content: space-around;
+
+        img {
+            width: 120px;
+            height: 38px;
+        }
+
+        &__navigation {
+            display: none;
+        }
+
+        &__tagline {
+            display: none;
+        }
+
+        &__menu-mobile {
+            display: block;
+            padding-right: 20px;
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &__main-logo {
+            padding-left: 20px;
         }
     }
 }

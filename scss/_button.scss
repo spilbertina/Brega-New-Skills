@@ -1,4 +1,7 @@
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include font('OSLight', 20px, 20px, 400);
     padding: 22px 32px;
     width: 208px;
@@ -17,14 +20,10 @@
 
 @media (max-width: 400px) {
     .button  {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include font('OSReg', 26px, 30px, 400);
+        @include font('OSReg', 18px, 24px, 400);
         width: 90%;
-        height: 76px;
+        height: 56px;
         margin-left: auto;
         margin-right: auto;
-        // margin-left: 40px;
         }
     }

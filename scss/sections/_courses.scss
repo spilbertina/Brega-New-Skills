@@ -1,11 +1,13 @@
+.name-courses {
+    grid-area: name1;
+    display: flex;
+    justify-content: center;
+    @include font('OSReg', 46px, 54px, 500);
+}
+
 .courses {
     grid-area: courses;
     overflow-x: scroll;
-    h3 {
-        @include font('OSReg', 46px, 54px);
-        display: flex;
-        justify-content: center;
-    }
 }
 
 .all-cards {
@@ -57,7 +59,11 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 950px) {
+    .name-courses {
+        @include font('OSReg', 36px, 42px, 500);
+    }
+
     .courses {
         h3 {
             @include font('OSReg', 36px, 42px, 500);
@@ -66,6 +72,9 @@
 
     .all-cards {
         justify-content: space-around;
+        min-width: 900px;
+        max-width: 1000px;
+        padding-bottom: 56px;
     }
 
     .card {

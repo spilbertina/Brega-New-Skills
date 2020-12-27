@@ -12,8 +12,8 @@
     }
 
     &__info {
-        max-width: 432px;
-        max-height: 60px;
+        width: 40%;
+        // height: 60px;
         @include font('OSReg', 16px, 20px, auto);
     }
 
@@ -42,12 +42,16 @@
 
         &__info {
             text-align: center;
+            width: 80%;
         }
 
         &__navigation {
             display: flex;
             justify-content: space-between;
             width: 200px;
+        }
+        &__logo-ozon {
+           margin-bottom: 7%;
         }
     }
 }

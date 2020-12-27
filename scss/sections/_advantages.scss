@@ -1,14 +1,16 @@
+.name-advantages {
+    @include font('OSReg', 46px, 54px, 500);
+    display: flex;
+    justify-content: center;
+    grid-area: name2;
+    margin-top: 66px;
+    margin-bottom: 66px;
+}
+
 .advantages {
     grid-area: advantages;
     overflow-x: scroll;
     padding-bottom: 80px;
-
-    h3 {
-        @include font('OSReg', 46px, 54px, 500);
-        display: flex;
-        justify-content: center;
-        margin: 66px 0;
-    }
 }
 
 .all-advantages {
@@ -48,13 +50,15 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 950px) {
+    .name-advantages {
+        @include font('OSReg', 36px, 42px, 500);
+        margin-top: 56px;
+        margin-bottom: 0;
+    }
+
     .advantages {
-        h3 {
-            @include font('OSReg', 36px, 42px, 500);
-            margin-top: 56px;
-            margin-bottom: 26px;
-        }
+        padding-bottom: 0;
     }
 
     .all-advantages {
@@ -69,8 +73,8 @@
         box-sizing: border-box;
         box-shadow: 2px 2px 20px #E9EEF1;
         border-radius: 12px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 36px;
+        margin-bottom: 56px;
 
         &-img {
             padding-top: 33px;
