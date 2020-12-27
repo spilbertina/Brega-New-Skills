@@ -1,6 +1,4 @@
 .footer {
-    // --nav-width: 581px;
-
     grid-area: footer;
     display: flex;
     justify-content: space-between;
@@ -13,26 +11,58 @@
 
     &__info {
         width: 40%;
-        // height: 60px;
         @include font('OSReg', 16px, 20px, auto);
     }
-
-    // &__navigation {
-    //     width: var(--nav-width);
-    // }
 
     &__logo-ozon {
         max-width: 107px;
     }
 }
 
+@media (max-width: 1180px) {
+    .footer {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        &__logo-ozon {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 805px) {
+    .footer {
+        &__navigation {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        &__main-logo {
+            display: none;
+        }
+
+        &__navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 200px;
+        }
+    }
+}
+
 @media (max-width: 400px) {
     .footer {
-        --nav-width: 300px;
-
         flex-direction: column;
         height: 473px;
         justify-content: space-around;
+
+        &__main-logo {
+            display: block;
+        }
 
         &__tagline {
             display: block;
@@ -42,16 +72,11 @@
 
         &__info {
             text-align: center;
-            width: 80%;
+            width: 82%;
         }
 
-        &__navigation {
-            display: flex;
-            justify-content: space-between;
-            width: 200px;
-        }
         &__logo-ozon {
-           margin-bottom: 7%;
+            margin-bottom: 7%;
         }
     }
 }

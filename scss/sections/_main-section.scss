@@ -27,9 +27,8 @@
 
     &__info {
         color: var(--color-white);
-        padding-top: 80px;
-        margin-left: 110px;
-        margin-bottom: 120px;
+        margin-left: 7%;
+        margin-bottom: 3%;
 
         &_second {
             margin-right: 7%;
@@ -45,6 +44,40 @@
         width: 500px;
         @include font('OSLight', 24px, 32px, auto);
         margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .main-section {
+        align-items: flex-end;
+
+        &__info {
+            margin-left: 5%;
+            margin-bottom: 7%;
+
+            &_second {
+                margin-right: 0%;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .main-section {
+        &__info {
+            &_second {
+                margin-right: 3%;
+            }
+        }
+        &__title {
+            @include font('OSBold', 46px, 60px, 600);
+        }
+
+        &__text {
+            width: 370px;
+            @include font('OSReg', 20px, 28px, auto);
+            
+        }
     }
 }
 

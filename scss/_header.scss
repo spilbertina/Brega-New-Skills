@@ -40,6 +40,9 @@
 
 @media (max-width: 950px) {
     .header {
+        margin-left: 5%;
+        margin-right: 5%;
+
         &__navigation {
             display: none;
 
@@ -79,16 +82,11 @@
 
         &__menu-mobile {
             display: block;
-            padding-right: 20px;
 
             img {
                 width: 32px;
                 height: 32px;
             }
-        }
-
-        &__main-logo {
-            padding-left: 20px;
         }
     }
 }
