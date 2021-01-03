@@ -14,16 +14,51 @@
     cursor: pointer;
 
     &_size {
-        width: 238px;
+        width: 245px;
+    }
+
+    &_size:hover {
+        background-color: var(--color-white);
+        color: var(--color-ozon);
+        transition-property: background, color;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in;
+        @include font('OSReg', 20px, 20px, 400);
+    }
+}
+
+.button:hover {
+    background-color: var(--color-white);
+    color: var(--color-ozon);
+    transition-property: background, color;
+    transition: 300ms ease-in;
+    @include font('OSReg', 20px, 20px, 400);
+    animation: flashing;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes flashing {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
     }
 }
 
 @media (max-width: 400px) {
-    .button  {
+    .button {
         @include font('OSReg', 18px, 24px, 400);
         width: 90%;
         height: 56px;
         margin-left: auto;
         margin-right: auto;
-        }
     }
+}

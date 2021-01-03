@@ -18,11 +18,31 @@
             text-decoration: none;
             color: var(--color-dark);
         }
+
+        &-link:hover {
+            transform: scale(1.5);
+        }
     }
 
     &__tagline {
         @include font('OSBold', 22px, 26px, 500);
         color: var(--color-dark);
+    }
+
+    &__tagline:hover {
+        // transform: rotate(-180deg);
+        // transition-duration: 1s;
+        animation: turn 1s infinite alternate;
+
+        @keyframes turn {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(-180deg);
+            }
+        }
     }
 
     &__menu-mobile {

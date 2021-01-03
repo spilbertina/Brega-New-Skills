@@ -69,11 +69,43 @@
   color: var(--color-dark);
 }
 
+.header__navigation-link:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 .header__tagline {
   font-family: "OSBold";
   font-size: 22px;
   line-height: 26px;
   color: var(--color-dark);
+}
+
+.header__tagline:hover {
+  -webkit-animation: turn 1s infinite alternate;
+          animation: turn 1s infinite alternate;
+}
+
+@-webkit-keyframes turn {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@keyframes turn {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
 }
 
 .header__menu-mobile {
@@ -154,7 +186,71 @@
 }
 
 .button_size {
-  width: 238px;
+  width: 245px;
+}
+
+.button_size:hover {
+  background-color: var(--color-white);
+  color: var(--color-ozon);
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  font-family: "OSReg";
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.button:hover {
+  background-color: var(--color-white);
+  color: var(--color-ozon);
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  font-family: "OSReg";
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-animation: flashing;
+          animation: flashing;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flashing {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes flashing {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @media (max-width: 400px) {
@@ -203,6 +299,8 @@
 
 .input:focus {
   outline: none;
+  -webkit-box-shadow: 2px 2px 10px #6e6e6e;
+          box-shadow: 2px 2px 10px #6e6e6e;
 }
 
 .input_valid {
@@ -358,6 +456,40 @@
   font-size: 58px;
   line-height: 68px;
   margin-bottom: 20px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: traffic;
+          animation-name: traffic;
+}
+
+@-webkit-keyframes traffic {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes traffic {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .main-section__text {
@@ -469,6 +601,45 @@
   font-family: "OSReg";
   font-size: 46px;
   line-height: 54px;
+}
+
+.name-courses:hover {
+  -webkit-animation: slidein;
+          animation: slidein;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 200px;
+  }
+  75% {
+    margin-left: -200px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 200px;
+  }
+  75% {
+    margin-left: -200px;
+  }
+  to {
+    margin-left: 0;
+  }
 }
 
 .courses {
@@ -587,6 +758,45 @@
   margin-bottom: 66px;
 }
 
+.name-advantages:hover {
+  -webkit-animation: increase;
+          animation: increase;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes increase {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes increase {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .advantages {
   -ms-grid-row: 7;
   -ms-grid-column: 2;
@@ -629,6 +839,45 @@
 .region-img {
   width: 72px;
   height: 56px;
+}
+
+.region-img:hover {
+  -webkit-animation: jump;
+          animation: jump;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes jump {
+  from {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes jump {
+  from {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
 }
 
 .region-info {
