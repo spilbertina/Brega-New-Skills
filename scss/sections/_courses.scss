@@ -5,6 +5,30 @@
     @include font('OSReg', 46px, 54px, 500);
 }
 
+.name-courses:hover {
+    animation: slidein;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+    @keyframes slidein {
+        from {
+            margin-left: 0;
+        }
+
+        25% {
+            margin-left: 200px;
+        }
+
+        75% {
+            margin-left: -200px;
+        }
+
+        to{
+            margin-left: 0;
+        }
+    }
+}
+
 .courses {
     grid-area: courses;
     overflow-x: scroll;
